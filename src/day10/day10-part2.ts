@@ -61,30 +61,11 @@ const renderScreen = () => {
 
 let x = 1;
 const grid = [];
-let rowIndex = 0;
 let currentRow = Array(40).fill('.');
 currentRow[0] = '#';
 
 let pointer = 0;
 
-/*
-cyclesToRun.forEach((cycle, i) => {
-  const cycleNumber = i+1;
-  const gridRow = Math.floor(i/40);
-  if(cycleNumber === 1 ||cycleNumber === 41 || cycleNumber === 81 || cycleNumber === 121 || cycleNumber === 161 || cycleNumber === 201){
-    sprite.x = 0;
-  } else {
-    sprite.x += 1;
-  }
-
-  console.log(gridRow);
-
-  if(cycle){
-    sprite.x += cycle;
-  }
-  x += cycle;
-})
-*/
 const isPointerOnSprite = () => {
   return (pointer === x-1 || pointer === x || pointer === x+1)
 }
