@@ -63,8 +63,8 @@ class Monkey {
         break;
     }
     this.inspections += 1;
-    return Math.floor(item/3); // Part 1, we divide the worry level by 3
-    //return item; // Part 2, we no longer divide the worry level by 3
+    // return Math.floor(item/3); // Part 1, we divide the worry level by 3
+    return item % 9699690; // Part 2, we no longer divide the worry level by 3
   }
 
   test(item: number){
@@ -73,7 +73,7 @@ class Monkey {
 }
 
 
-let data = FileReader.readFile(`${FileReader.getDirectoryOfPath(import.meta.url)}/day11.example.txt`);
+let data = FileReader.readFile(`${FileReader.getDirectoryOfPath(import.meta.url)}/day11.txt`);
 
 
 
@@ -122,7 +122,7 @@ data.forEach((row, index) => {
   }
 })
 
-const numberOfRounds = 20;
+const numberOfRounds = 10000;
 
 for(let i=0; i < numberOfRounds; i++){
   game.playARound();
