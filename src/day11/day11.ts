@@ -64,7 +64,7 @@ class Monkey {
     }
     this.inspections += 1;
     // return Math.floor(item/3); // Part 1, we divide the worry level by 3
-    return item % 9699690; // Part 2, we no longer divide the worry level by 3
+    return item % 9699690; // Part 2, we need to use the lowest common multiple of all the divisor
   }
 
   test(item: number){
